@@ -33,7 +33,8 @@ void str_cli(FILE *fp, int sockfd)
     if (FD_ISSET(sockfd, &rset)) {                           /* socket is readable */
       if (read(sockfd, recvline, MAX_SIZE) == 0) {
         if (stdineof == 1) return;
-	else printf("str_cli: server terminated prematurely");
+	else printf("str_cli: server terminated prematurely\n");
+	exit(0);
       }
       fputs(recvline, stdout);
     }
