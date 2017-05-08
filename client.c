@@ -68,7 +68,7 @@ int main(int argc, char **argv)
   int sockfd; 
   struct sockaddr_in servaddr;
   if(argc < 4) {
-    printf("Usage: ./<IP> <TCP/UDP> <Port>\n");
+    printf("Usage: ./client <TCP/UDP> <IP> <Port>\n");
     exit(0);
   }
   bzero(&servaddr, sizeof(servaddr));
